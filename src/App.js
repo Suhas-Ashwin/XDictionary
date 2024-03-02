@@ -19,8 +19,8 @@ export default function App() {
   useEffect(() => {});
 
   const handleClick = () => {
+    setIsSearch(true);
     if (search) {
-      setIsSearch(true);
       setMeaning("");
       customDictionary.forEach((item) => {
         if (item.word.toLowerCase() === search.toLowerCase()) {
@@ -28,7 +28,7 @@ export default function App() {
         }
       });
     } else {
-      setIsSearch(false);
+      //setIsSearch(false);
       setMeaning("");
     }
   };
